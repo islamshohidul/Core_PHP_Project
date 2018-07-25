@@ -78,6 +78,16 @@
 			background-color: #ffcccc;
 		}
 	</style>
+
+			<script type="text/javascript">
+
+			function ConfirmDelete() {
+ 		 		return confirm("Are you sure you want to delete?");
+			}
+
+
+
+		</script>
 </head>
 <body>
 <?php include 'connection.php';?>
@@ -108,7 +118,7 @@
 		        echo "<tr><td>".$row['ID']."</td> 
 					<td>".$row['Title']."</td>
 					<td>".$row['Description']."</td> 
-					<td > <a href='delete.php?ID=".$row["ID"]."'>Delete</a> </td>
+					<td > <a href='delete.php?ID=".$row["ID"]."' onclick='return ConfirmDelete();'>Delete</a> </td>
 					<td > <a href='edit.php?Title = ".$row["Title"]." &Description = ".$row["Description"]."&ID=".$row["ID"]."'>Edit</a> </td></tr>";
 
 
@@ -129,6 +139,9 @@
 
 		</tbody>
 
+		
+
+		
 
 </body>
 </html>
