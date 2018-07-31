@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator in JavaScript</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<style type="text/css">
+
+	
+
+body {
+    font-size: 64px;
+    
+
+}
+.container{
+	justify-content: center;
+}
+
+	.btn {
+  background-color: green;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 30px 20px 4px 2px;
+  border-radius: 50%;
+justify-content: center;
+}
+
+.screen {
+
+	
+  	
+  background-color: black;
+  color: white;
+  text-align: right;
+	margin: 0;
+ 
+ 
+  background-color: black;
+  color: white;
+  text-align: right;
+  
+  width: 280px;
+  font-size: 32px;
+  padding: 10px;
+ 
+
+}
+
+	</style>
+</head>
+<body>
+
+
+
+		<div class="container">
+
+			<div class="screen" id="currentValue"> </div>
+
+			<div class="keys">
+
+			<table>
+					<tr>
+
+						<td>
+							<button class ="btn" id="btn7" >7</button>
+					
+						</td>
+						<td>
+							<button class ="btn" id="btn8">8</button>
+					
+						</td>
+						<td>
+							<button class ="btn" id="btn9">9</button>
+					
+						</td>
+						<td>
+							<button class ="btn"  id="clear">c</button>
+					
+						</td>
+					</tr>	
+
+					<tr>
+					<td>
+						<button class ="btn" id="btn4">4</button>
+				
+					</td>
+					<td>
+						<button class ="btn" id="btn5">5</button>
+				
+					</td>
+					<td>
+						<button  class ="btn" id="btn6">6</button>
+				
+					</td>
+					<td>
+						<button class ="btn" id="btnd" > / </button>
+				
+					</td>
+					
+
+				</tr>
+
+				<tr>
+					<td>
+						<button class ="btn" id="btn1">1</button>
+				
+					</td>
+					<td>
+						<button class ="btn" id="btn2">2</button>
+				
+					</td>
+					<td>
+						<button class ="btn" id="btn3">3</button>
+				
+					</td>
+					<td>
+						<button class ="btn" id="btn-">-</button>
+				
+					</td>
+					
+
+				</tr>
+
+				<tr>
+					<td>
+						<button class ="btn" id="btn.">.</button>
+				
+					</td>
+					<td>
+						<button class ="btn" id="btn0">0</button>
+				
+					</td>
+					<td>
+						<button class="btn" id="ans">=</button>
+				
+					</td>
+					<td>
+						<button class ="btn" id="btn+">+</button>
+				
+					</td>
+					
+
+				</tr>
+				
+
+			</table>
+			
+
+			
+
+
+
+			</div>
+			
+		</div>
+
+<script type="text/javascript">
+	
+
+// 	$(".btn").click(function(event) {
+//  var thingClicked = this.innerHTML;
+//  //console.log("you clicked: ", thingClicked)
+//   $(".screen").html(thingClicked);
+
+// })
+var disp = document.getElementById("currentValue");
+
+function ud(n){ 
+disp.innerHTML += n ;
+}
+function ans(){
+c=eval(disp.innerHTML);
+disp.innerHTML=c;
+}
+function clc(){
+disp.innerHTML='';
+}
+
+document.getElementById("btn1").addEventListener("click",function(){ ud(1); });
+document.getElementById("btn2").addEventListener("click",function(){ ud(2); });
+document.getElementById("btn3").addEventListener("click",function(){ ud(3); });
+document.getElementById("btn4").addEventListener("click",function(){ ud(4); });
+document.getElementById("btn5").addEventListener("click",function(){ ud(5); });
+document.getElementById("btn6").addEventListener("click",function(){ ud(6); });
+document.getElementById("btn7").addEventListener("click",function(){ ud(7); });
+document.getElementById("btn8").addEventListener("click",function(){ ud(8); });
+document.getElementById("btn9").addEventListener("click",function(){ ud(9); });
+document.getElementById("btn0").addEventListener("click",function(){ ud(0); });
+document.getElementById("btn.").addEventListener("click",function(){ ud('.'); });
+
+document.getElementById("btn+").addEventListener("click",function(){ ud('+'); });
+document.getElementById("btn-").addEventListener("click",function(){ ud('-'); });
+//document.getElementById("mult").addEventListener("click",function(){ ud('*'); });
+document.getElementById("btnd").addEventListener("click",function(){ ud('/'); });
+
+document.getElementById("clear").addEventListener("click",function(){clc(); });
+document.getElementById("ans").addEventListener("click",function(){ ans(); });
+
+
+</script>
+</body>
+</html>
+
+
+</body>
+</html>
